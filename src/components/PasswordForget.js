@@ -5,7 +5,7 @@ import { auth } from '../firebase';
 
 const PasswordForgetPage = () =>
   <div>
-    <h1>PasswordForget</h1>
+    <h1 style={{textAlign:"center"}}>PasswordForget</h1>
     <PasswordForgetForm />
   </div>
 
@@ -48,6 +48,7 @@ class PasswordForgetForm extends Component {
     const isInvalid = email === '';
 
     return (
+      <div className="container">
       <form onSubmit={this.onSubmit}>
         <input
           value={this.state.email}
@@ -61,6 +62,7 @@ class PasswordForgetForm extends Component {
 
         { error && <p>{error.message}</p> }
       </form>
+      </div>
     );
   }
 }

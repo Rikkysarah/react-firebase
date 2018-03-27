@@ -10,7 +10,7 @@ import * as routes from '../constants/routes';
 
 const SignUpPage = ({history}) =>
   <div>
-    <h1>SignUp</h1>
+    <h1 style={{textAlign:"center"}}>SignUp</h1>
     <SignUpForm history={history} />
   </div>
 // Initialize the state of the component
@@ -80,8 +80,9 @@ class SignUpForm extends Component {
     email === '' ||
     username === '';
     return (
+      <div className="container">
       <form onSubmit={this.onSubmit}>
-          <input
+          <input 
           value={username}
           onChange={event => this.setState(byPropKey('username', event.target.value))}
           type="text"
@@ -111,6 +112,8 @@ class SignUpForm extends Component {
 
         { error && <p>{error.message}</p> }
       </form>
+      </div>
+  
     );
   }
 }

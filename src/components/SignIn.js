@@ -8,7 +8,7 @@ import * as routes from '../constants/routes';
 
 const SignInPage = ({ history }) =>
   <div>
-    <h1>SignIn</h1>
+    <h1 style={{textAlign:"center"}}>SignIn</h1>
     <SignInForm history={history} />
     <PasswordForgetLink />
     <SignUpLink />
@@ -65,6 +65,7 @@ class SignInForm extends Component {
       email === '';
 
     return (
+      <div className="container">
       <form onSubmit={this.onSubmit}>
         <input
           value={email}
@@ -84,6 +85,7 @@ class SignInForm extends Component {
 
         { error && <p>{error.message}</p> }
       </form>
+      </div>
     );
   }
 }

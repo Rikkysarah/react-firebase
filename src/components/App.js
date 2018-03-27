@@ -19,6 +19,7 @@ import withAuthentication from './withAuthentication';
 
 const App = () =>
   <Router>
+ 
     <div className="wrapper">
       <Navigation />
 
@@ -31,6 +32,7 @@ const App = () =>
       <Route exact path={routes.HOME} component={() => <HomePage />} />
       <Route exact path={routes.ACCOUNT} component={() => <AccountPage />} />
     </div>
+    
   </Router>
 
 export default withAuthentication(App);

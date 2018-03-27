@@ -1,6 +1,7 @@
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: #f1f1f1;
+  background-color: white;
+  
 }
 
 header {
@@ -8,6 +9,8 @@ header {
   background-color: #103D5D;
   padding: 33px 0 25px 15px;
 }
+
+
 
 header h1 {
   font-size: 25px;
@@ -30,15 +33,15 @@ header i {
 }
 
 .container {
-  display: flex;
-  max-width: 1100px;
+  justify-content: center;
+  width: 50%;
   margin: 0 auto;
   padding-top: 30px;
 }
 
 .wrapper {
   max-width: 1100px;
-  margin: 0 auto;
+  margin: 0 auto
 }
 
 .add-item {
@@ -61,7 +64,7 @@ header i {
   margin-bottom: 17px;
   border-radius: 10px;
   display: inline-;
-  width: 100%;  
+  width: 100%;
 }
 
 .display-item button {
@@ -76,10 +79,9 @@ header i {
 }
 
 input {
-  font-size: 22px;
+  font-size: 16px;
   color: #000;
   padding: 18px 22px;
-  font-size: 16px;
   margin-bottom: 17px;
   border: 0;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
@@ -93,13 +95,15 @@ ul {
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
 
 li {
   width: calc(50% - 50px);
   list-style-type: none;
   margin-right: 50px;
-  color: #000;
+  /* text-decoration: none; */
+  color: #fff;
   margin-bottom: 30px;
   font-size: 30px
 }
@@ -123,10 +127,14 @@ li p {
 }
 
 form button {
-  width: 85%;
+  width: 88%;
   margin-top: 5px;
 }
-
+a:-webkit-any-link {
+  color: -webkit-link;
+  cursor: pointer;
+  text-decoration: none;
+}
 button {
   border-radius: 2px;
   min-width: 88px;
