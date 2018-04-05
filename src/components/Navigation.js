@@ -26,8 +26,8 @@ const NavigationAuth = () =>
 
 const NavigationNonAuth = () =>
   <ul className="display-item">
-    <li style={{textAlign:"center"}}><Link to={routes.LANDING}>Welcome</Link></li>
-    <li><Link to={routes.SIGN_IN}>Sign In</Link></li>
+    <li style={{textAlign:"center"}}><Link to={routes.SIGN_IN}>Sign In</Link></li>
+    <li><Link to={routes.SIGN_UP}>Sign Up</Link></li>
   </ul>
 
 export default Navigation;

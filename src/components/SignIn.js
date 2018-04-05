@@ -79,7 +79,7 @@ class SignInForm extends Component {
           type="password"
           placeholder="Password"
         />
-        <button disabled={isInvalid} type="submit">
+        <button disabled={isInvalid} type="submit" class="btn btn-primary">
           Sign In
         </button>
 
