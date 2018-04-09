@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import { 
+  Link,
+  withRouter, } from 'react-router-dom';
 
 import { SignUpLink } from './SignUp';
 import { PasswordForgetLink } from './PasswordForget';
@@ -8,9 +10,8 @@ import * as routes from '../constants/routes';
 
 const SignInPage = ({ history }) =>
   <div>
-    <h1 style={{textAlign:"center"}}>SignIn</h1>
+    <h5 style={{textAlign:"center"}}>Log In</h5>
     <SignInForm history={history} />
-    <PasswordForgetLink />
     <SignUpLink />
   </div>
 
@@ -65,7 +66,7 @@ class SignInForm extends Component {
       email === '';
 
     return (
-      <div className="container">
+      <div className="contain">
       <form onSubmit={this.onSubmit}>
         <input
           value={email}
@@ -79,19 +80,32 @@ class SignInForm extends Component {
           type="password"
           placeholder="Password"
         />
-        <button disabled={isInvalid} type="submit" class="btn btn-primary">
+        <button disabled={isInvalid} type="submit" className="btn btn-primary">
           Sign In
         </button>
 
         { error && <p>{error.message}</p> }
+        <div className="pass">
+        <PasswordForgetLink />
+        <p style={{textAlign:"center"}}>
+          Don't have an account?
+          {' '}
+          <Link to={routes.SIGN_UP}>Sign Up</Link>
+        </p>
+        </div>
       </form>
       </div>
     );
   }
 }
 
+
+  
+
 export default withRouter(SignInPage);
 
 export {
   SignInForm,
+
+  
 };

@@ -133,12 +133,24 @@ class SignUpForm extends Component {
           placeholder="Confirm Password"
         />
         </div>
-        <p>Got an invite code?</p>
-        <button disabled={isInvalid}  type="submit" class="btn btn-primary">
+        <button disabled={isInvalid}  type="submit" className="btn btn-primary">
           Next
         </button>
-
         { error && <p>{error.message}</p> }
+        <div className="account">
+        <p style={{textAlign:"center"}}>
+          Already have an account?
+          {' '}
+          <Link to={routes.SIGN_IN}>Log In</Link>
+        </p>
+        <p  style={{left:"90px",position:"relative"}}>
+        By clicking on
+        {' '}
+        <Link to={routes.SIGN_UP}>Sign Up</Link>
+        You agree to our <a href="#">terms & conditions</a> and <a href="#">Privacy policy</a>
+      </p>
+      </div>
+
       </form>
       </div>
       </div>
@@ -149,9 +161,6 @@ class SignUpForm extends Component {
         <p style={{textAlign:"center"}}>We'll like to meet you. Please fill in<br/> 
         your name, email, password and phone <br/>
         number to create an account</p>
-        <div className="contact">
-          <p style={{textAlign:"center"}}>Need help? <a href="#">Contact Us</a></p>
-        </div>
       </div>
       </div>
       </div>
@@ -162,18 +171,9 @@ class SignUpForm extends Component {
 
 const SignUpLink = () =>
   <div className="account">
-  <p>
-    Don't have an account?
-    {' '}
-    <Link to={routes.SIGN_UP}>Sign Up</Link>
-  </p>
+  
   <div className="account">
-  <p>
-    By clicking on
-    {' '}
-    <Link to={routes.SIGN_UP}>Sign Up</Link>
-    You agree to our <a href="#">terms & conditions</a> and<a href="#">Privacy policy</a>
-  </p>
+  
   </div>
   </div>
   
